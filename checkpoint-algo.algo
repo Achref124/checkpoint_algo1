@@ -1,0 +1,41 @@
+ALGORITHM nb_length_insentence
+VAR
+    str : STRING := "the best in the world.";
+    count : INTEGER := 0;
+BEGIN
+    FOR (int i=0; i < str.length(); i++)  DO
+        IF ( str.charAt[i]  ' ') THEN
+            count++;
+        END_IF
+    END_FOR
+            Write(count);
+END
+
+
+ALGORITHM  nb_word_insentence
+VAR
+    str : STRING := "the best in the world.";
+    count : INTEGER := 1;
+BEGIN
+    FOR i in str  DO
+        IF str[i] == " " THEN
+        count++
+    END_FOR
+    Write(count)
+END
+
+
+ALGORITHM nb_vowels_insentence
+VAR
+    str : STRING := "the best in the world.";
+    count : INTEGER := 0;
+    Vowels : ARRAY_OF CHAR[6] := [a,e,u,o,i,y];
+BEGIN
+    FOR i in str  DO
+      FOR j in Vowels DO
+        if str[i]== Vowels[j]
+        count++;
+      END_FOR
+    END_FOR
+    Write(count);
+END
